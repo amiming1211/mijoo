@@ -1,0 +1,247 @@
+:root {
+  --highlight-color: #0041b9;
+  --background-color: #041824;
+}
+
+@font-face {
+  font-family: 'NanumGothicBold';
+  src: url('../fonts/NanumGothicBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  /* font-family: 'NanumGothicBold', sans-serif; */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #041824;
+  padding: 10px 30px;
+  gap: 20px; 
+  height: 170px; /* header 높이 설정 */
+  background-color: #041824;
+  color: #fff;
+}
+
+header .logo {
+  height: 100%; /* 부모 컨테이너 높이에 맞춤 */
+}
+
+header .banner {
+  width: 100%; /* 가로를 100%로 설정 */
+  max-width: 800px; /* 가로 크기 제한 */
+  height: auto; /* 비율 유지 */
+  margin: 0 auto;
+}
+
+header .logo,
+header .banner {
+  align-self: center; /* Align both logo and banner consistently */
+}
+
+header .snsIcons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+header .snsIcons img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+section {
+  padding: 1% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column; /* 세로로 배치 */
+  align-items: center;    /* 가로 중앙 정렬 */
+  text-align: center;     /* 텍스트도 중앙 정렬 */
+  width: fit-content;
+}
+
+h1 {
+  font-size: 2.5rem; /* 가장 큰 제목 */
+  font-weight: bold;
+  color: #041824;
+}
+
+h2 {
+  font-size: 1.6rem; /* 중간 제목 */
+  font-weight: 600;
+  color: #333;
+}
+
+h3 {
+  font-size: 1.3rem; /* 소제목 */
+  font-weight: 500;
+  color: #555;
+}
+
+h4 {
+  font-size: 1.15rem; /* 소제목 */
+  font-weight: 500;
+  color: #555;
+}
+
+p {
+  font-size: 1rem; /* 일반 텍스트 */
+  color: #666;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
+.text-container {
+  margin-bottom: 3%;
+}
+
+.image1 {
+  width:80%
+}
+
+.image2 {
+  width:100%
+}
+
+.image3 {
+  width:80%
+}
+
+.image4 {
+  width:80%
+}
+
+.image5 {
+  width:80%
+}
+
+.image6 {
+  width:90%
+}
+
+.horizontal-container {
+  display: flex;
+  gap: 20px; /* 두 div 사이 간격 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.horizontal-container .text-container {
+  flex: 1; /* 텍스트 영역이 더 넓게 차지하도록 */
+  margin-bottom: 0;
+}
+
+.horizontal-container .img-container {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* 기본 폰트 크기 조정 */
+  }
+
+  header {
+    flex-direction: column; /* 수직 정렬 */
+    height: auto; /* 높이를 자동으로 조정 */
+    padding: 20px; /* 여백 추가 */
+    gap: 10px;
+  }
+
+  header .logo {
+    height: auto; /* 자동 크기 조정 */
+    width: 80%; /* 로고 가로 크기 조정 */
+    align-self: center;
+  }
+
+  header .banner {
+    max-width: 90%; /* 배너 크기 제한 */
+    margin: 10px auto; /* 상하 여백 추가 */
+  }
+
+  header .snsIcons {
+    gap: 20px; /* 아이콘 간격 조정 */
+  }
+
+  header .snsIcons img {
+    width: 50px; /* 아이콘 크기 축소 */
+    height: 50px;
+  }
+
+  section {
+    padding: 5% 2%; /* 섹션 여백 조정 */
+  }
+
+  .container {
+    width: 90%; /* 컨테이너 가로 폭 조정 */
+    gap: 15px; /* 간격 축소 */
+  }
+
+  .img-container {
+    width: 100%; /* 이미지 컨테이너 가로 100% */
+  }
+
+  .img-container img {
+    width: 100%; /* 이미지 크기 제한 */
+    height: auto; /* 비율 유지 */
+  }
+
+  h1 {
+    font-size: 2rem; /* 가장 큰 제목 크기 축소 */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* 중간 제목 크기 축소 */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* 소제목 크기 축소 */
+  }
+
+  h4 {
+    font-size: 1rem; /* 소제목 크기 축소 */
+  }
+
+  p {
+    font-size: 0.9rem; /* 일반 텍스트 크기 축소 */
+  }
+
+  .horizontal-container {
+    flex-direction: column; /* 세로 배치로 변경 */
+    gap: 15px; /* 간격 축소 */
+  }
+
+  .horizontal-container .text-container {
+    width: 100%; /* 텍스트 영역 가로 100% */
+  }
+
+  .horizontal-container .img-container {
+    width: 100%; /* 이미지 컨테이너 가로 100% */
+  }
+}
